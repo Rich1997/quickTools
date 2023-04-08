@@ -1,0 +1,62 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10,151,1000;8..144,0,100,100;8..144,0,100,200;8..144,0,100,300;8..144,0,100,400;8..144,0,100,500;8..144,0,100,600;8..144,0,100,700;8..144,0,100,800;8..144,0,100,900;8..144,0,100,1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    height: 100%;
+    width: 100%;
+
+    font-synthesis: none;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Base colors */
+    --primary-light: #f5f5f5;
+    --primary-dark: #161616;
+    --secondary-light: #6b6b6b;
+    --secondary-dark: #6b6b6b;
+    --tertiary-light: #c6c6c6;
+    --tertiary-dark: #393939;
+    --surface-light: #e4e4e7;
+    --surface-dark: #27272a;
+    --primary-accent: #ef743c;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: roboto flex;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.ital {
+    font-variation-settings: 'slnt' -12;
+}
+
+/* Default border */
+.d-b {
+    @apply border border-base-content/20;
+}
+
+/* Default surface */
+.d-s {
+    @apply bg-base-100 p-2 d-b;
+}
