@@ -1,18 +1,11 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import {
-    Cross2Icon,
-    DotsVerticalIcon,
-    GitHubLogoIcon,
-} from '@radix-ui/react-icons';
-import { useState } from 'react';
+import { DotsVerticalIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import ThemeSelector from './ThemeSelector';
 import ThemeSelectorMobile from './ThemeSelectorMobile';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            {' '}
             <div className="border-b border-base-content/20">
                 <div className="flex items-center justify-between gap-4 flex-wrap text-base-content py-4 px-6 max-w-7xl mx-auto">
                     <div className="tracking-tight text-2xl">
@@ -23,10 +16,7 @@ const Navbar = () => {
                         <ThemeSelector />
                         <GitHubLogoIcon />
                     </div>
-                    <div
-                        className="tablet:hidden block cursor-pointer p-2 d-s"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
+                    <div className="tablet:hidden block cursor-pointer p-2 d-s">
                         <Dialog.Root>
                             <Dialog.Trigger asChild>
                                 <DotsVerticalIcon />
@@ -38,7 +28,7 @@ const Navbar = () => {
                                         <div className="py-2">About</div>
                                         <div className="py-2">GitHub</div>
                                     </div>
-                                    <div className="p-6 flex gap-6 flex-wrap items-center pt-6 border-t border-base-content/20 bg-base-200">
+                                    <div className="p-6 flex gap-6 flex-wrap items-center pt-6 border-t border-base-content/10 bg-base-200">
                                         <div>Select theme</div>
                                         <ThemeSelectorMobile />
                                     </div>
