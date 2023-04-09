@@ -32,13 +32,13 @@ const Navbar = () => {
                         </div>
                     </Dialog.Trigger>
                     <Dialog.Portal>
-                        <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed top-0 left-[50%] max-h-[85vh] w-full translate-x-[-50%] rounded focus:outline-none bg-base-100 border-b border-base-content/10">
+                        <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed top-0 left-[50%] max-h-[85vh] w-full translate-x-[-50%] focus:outline-none bg-base-100">
                             <div className="py-4 px-6">
                                 <div className="py-2">Docs</div>
                                 <div className="py-2">About</div>
                                 <div className="py-2">GitHub</div>
                             </div>
-                            <div className="p-6 flex gap-6 flex-wrap items-center pt-6 border-t border-base-content/10 bg-base-200">
+                            <div className="p-6 flex gap-6 flex-wrap items-center pt-6 border-y border-base-content/10 bg-base-200">
                                 <div>Select theme</div>
                                 <ThemeSelectorMobile />
                             </div>
