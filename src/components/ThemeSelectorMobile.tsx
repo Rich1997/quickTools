@@ -11,7 +11,7 @@ const ThemeSelectorMobile = () => {
         localStorage.setItem('localTheme', theme);
     }, [theme]);
     return (
-        <div className="">
+        <div className="tablet:hidden block">
             <select
                 className="rounded pl-4 text-base-content leading-none text-sm select select-bordered select-sm w-32"
                 onChange={(e) => {
