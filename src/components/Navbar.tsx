@@ -1,7 +1,10 @@
-import { GitHubLogoIcon, HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { DotsVerticalIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
+import { useState } from 'react';
 import ThemeSelector from './ThemeSelector';
+import ThemeSelectorMobile from './ThemeSelectorMobile';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
             <div className="flex items-center justify-between gap-4 flex-wrap text-base-content py-4 px-6 w-full">
@@ -11,15 +14,25 @@ const Navbar = () => {
                         <span className="font-light">Tools</span>
                     </div>
                 </div>
-                {/* <div className="tablet:hidden block rounded cursor-pointer d-s">
-                    <HamburgerMenuIcon />
-                </div> */}
-                <div className="flex items-center gap-4 tablet:flex ">
-                    <ThemeSelector />
-                    <GitHubLogoIcon />
+
+                <div className="flex items-center gap-4">
+                    <div
+                        className={`tablet:flex items-center gap-4 ${
+                            isOpen ? '' : 'hidden'
+                        }`}
+                    >
+                        <ThemeSelector />
+                        <GitHubLogoIcon />
+                        <ThemeSelectorMobile />
+                    </div>
+                    <div
+                        className="tablet:hidden block cursor-pointer p-2 d-s"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <DotsVerticalIcon />
+                    </div>
                 </div>
             </div>
-            <div className="tablet:hidden block"></div>
         </div>
     );
 };

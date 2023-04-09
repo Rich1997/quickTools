@@ -58,5 +58,5 @@ body {
 
 /* Default surface */
 .d-s {
-    @apply bg-base-100 p-2 d-b;
+    @apply bg-base-100 rounded d-b;
 }
