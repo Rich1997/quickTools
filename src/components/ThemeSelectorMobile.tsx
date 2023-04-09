@@ -1,10 +1,9 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { themes } from '../utils/Constants';
 
 const ThemeSelectorMobile = () => {
     const { theme, setTheme } = useContext(ThemeContext);
-
     useEffect(() => {
         const htmlElement = document.querySelector('html');
         if (htmlElement) htmlElement.setAttribute('data-theme', theme);
@@ -31,4 +30,5 @@ const ThemeSelectorMobile = () => {
         </div>
     );
 };
+
 export default ThemeSelectorMobile;

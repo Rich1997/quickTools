@@ -60,3 +60,8 @@ body {
 .d-s {
     @apply bg-base-100 rounded d-b;
 }
+
+/* Default hover */
+.d-h {
+    @apply hover:bg-base-200;
+}

@@ -5,13 +5,12 @@ import {
     ChevronUpIcon,
 } from '@radix-ui/react-icons';
 import * as Select from '@radix-ui/react-select';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { themes } from '../utils/Constants';
 
 const ThemeSelector = () => {
     const { theme, setTheme } = useContext(ThemeContext);
-
     useEffect(() => {
         const htmlElement = document.querySelector('html');
         if (htmlElement) htmlElement.setAttribute('data-theme', theme);
@@ -20,7 +19,7 @@ const ThemeSelector = () => {
     return (
         <div className="tablet:block hidden">
             <Select.Root value={theme} onValueChange={setTheme}>
-                <Select.Trigger className="text-sm leading-none text-base-content p-2 d-s">
+                <Select.Trigger className="text-sm leading-none text-base-content p-2">
                     <div className="flex items-center justify-center gap-1">
                         <Select.Icon>
                             <BlendingModeIcon />
@@ -67,4 +66,5 @@ const ThemeSelector = () => {
         </div>
     );
 };
+
 export default ThemeSelector;

@@ -2,6 +2,7 @@ export const themes = [
     { value: 'system', option: 'System' },
     { value: 'light', option: 'Light' },
     { value: 'dark', option: 'Dark' },
+    { value: 'neon', option: 'Neon' },
     { value: 'cupcake', option: 'Cupcake' },
     { value: 'bumblebee', option: 'Bumblebee' },
     { value: 'emerald', option: 'Emerald' },
