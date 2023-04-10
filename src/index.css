@@ -61,7 +61,7 @@ body {
     @apply bg-base-100 rounded d-b;
 }
 
-/* Default hover */
-.d-h {
+/* Default surface hover */
+.d-s-h {
     @apply hover:bg-base-200;
 }

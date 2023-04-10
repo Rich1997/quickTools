@@ -10,7 +10,7 @@ import ThemeSelectorMobile from './ThemeSelectorMobile';
 const Navbar = () => {
     return (
         <div className="border-b border-base-content/20">
-            <div className="flex items-center justify-between gap-4 flex-wrap text-base-content py-4 px-6 max-w-7xl mx-auto">
+            <div className="flex items-center justify-between gap-4 flex-wrap text-base-content py-4 px-6 max-w-6xl mx-auto">
                 <div className="tracking-tight text-2xl">
                     <span className="font-black italic ital">quick</span>
                     <span className="font-light">Tools</span>
@@ -33,18 +33,18 @@ const Navbar = () => {
                     </Dialog.Trigger>
                     <Dialog.Portal>
                         <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed top-0 left-[50%] max-h-[85vh] w-full translate-x-[-50%] focus:outline-none bg-base-100">
-                            <div className="py-4 px-10">
-                                <div className="py-2">Docs</div>
-                                <div className="py-2">About</div>
-                                <div className="py-2">GitHub</div>
+                            <div className="flex flex-col gap-6 p-8">
+                                <div>Docs</div>
+                                <div>About</div>
+                                <div>GitHub</div>
                             </div>
-                            <div className="py-6 px-10 flex gap-6 flex-wrap items-center border-y border-base-content/10 bg-base-200">
+                            <div className="p-8 flex gap-6 flex-wrap items-center border-y border-base-content/10 bg-base-200">
                                 <div>Select theme</div>
                                 <ThemeSelectorMobile />
                             </div>
                             <Dialog.Close asChild>
                                 <button
-                                    className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-6 right-8 inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"
+                                    className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-4 right-4 inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"
                                     aria-label="Close"
                                 >
                                     <Cross2Icon />

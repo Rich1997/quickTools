@@ -1,11 +1,22 @@
+import ContentLayout from './components/ContentLayout';
+import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import PageLayout from './components/PageLayout';
+import Sidebar from './components/Sidebar';
 
 function App() {
     return (
-        <>
-            <Navbar />
-            <div className="max-w-7xl mx-auto p-6"></div>
-        </>
+        <div className="w-full min-h-screen h-screen">
+            <PageLayout>
+                <Navbar />
+                <ContentLayout>
+                    <Sidebar />
+                    <div>
+                        <Hero />
+                    </div>
+                </ContentLayout>
+            </PageLayout>
+        </div>
     );
 }
 

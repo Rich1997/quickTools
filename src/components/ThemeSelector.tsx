@@ -19,7 +19,7 @@ const ThemeSelector = () => {
     return (
         <div className="tablet:block hidden">
             <Select.Root value={theme} onValueChange={setTheme}>
-                <Select.Trigger className="text-sm leading-none text-base-content p-2 d-s d-h">
+                <Select.Trigger className="text-sm leading-none text-base-content p-2 d-s d-s-h">
                     <div className="flex items-center justify-center gap-1">
                         <Select.Icon>
                             <BlendingModeIcon />
