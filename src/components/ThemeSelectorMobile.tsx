@@ -14,8 +14,7 @@ const ThemeSelectorMobile = () => {
             <select
                 className="rounded pl-4 text-base-content leading-none text-sm select select-bordered select-sm w-32"
                 onChange={(e) => {
-                    const selected = e.target.value;
-                    setTheme(selected);
+                    setTheme(e.target.value);
                 }}
                 value={theme}
             >
