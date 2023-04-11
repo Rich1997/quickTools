@@ -32,24 +32,16 @@ const Navbar = () => {
                         </div>
                     </Dialog.Trigger>
                     <Dialog.Portal>
-                        <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed top-0 left-[50%] max-h-[85vh] w-full translate-x-[-50%] focus:outline-none bg-base-100">
+                        <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed top-[80px] left-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] focus:outline-none bg-base-100 rounded d-b">
                             <div className="flex flex-col gap-6 p-8">
                                 <div>Docs</div>
                                 <div>About</div>
                                 <div>GitHub</div>
                             </div>
-                            <div className="p-8 flex gap-6 flex-wrap items-center border-y border-base-content/10 bg-base-200">
+                            <div className="p-8 flex gap-6 flex-wrap items-center border-t border-base-content/10 bg-base-200">
                                 <div>Select theme</div>
                                 <ThemeSelectorMobile />
                             </div>
-                            <Dialog.Close asChild>
-                                <button
-                                    className="text-violet11 hover:bg-violet4 focus:shadow-violet7 absolute top-4 right-4 inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"
-                                    aria-label="Close"
-                                >
-                                    <Cross2Icon />
-                                </button>
-                            </Dialog.Close>
                         </Dialog.Content>
                     </Dialog.Portal>
                 </Dialog.Root>
