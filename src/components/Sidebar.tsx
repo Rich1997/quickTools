@@ -14,7 +14,7 @@ const Sidebar = () => {
             icon: <CounterClockwiseClockIcon />,
         },
         { value: 'favorites', option: 'Favorites', icon: <StarIcon /> },
-        { value: 'suggested', option: 'Suggested', icon: <CubeIcon /> },
+        { value: 'tools', option: 'Tools', icon: <CubeIcon /> },
     ];
 
     return (
