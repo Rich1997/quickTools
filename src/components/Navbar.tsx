@@ -1,9 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import {
-    Cross2Icon,
-    DotsVerticalIcon,
-    GitHubLogoIcon,
-} from '@radix-ui/react-icons';
+import { DotsVerticalIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
 import ThemeSelector from './ThemeSelector';
 import ThemeSelectorMobile from './ThemeSelectorMobile';
 
@@ -17,8 +13,8 @@ const Navbar = () => {
                 </div>
                 <div className="items-center gap-6 tablet:flex hidden">
                     <div className="flex items-center gap-6">
-                        <span className="text-sm font-bold">Docs</span>
-                        <span className="text-sm font-bold">About</span>
+                        <span className="text-sm">Docs</span>
+                        <span className="text-sm">About</span>
                     </div>
                     <div className="flex items-center gap-6">
                         <ThemeSelector />

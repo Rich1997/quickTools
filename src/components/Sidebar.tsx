@@ -18,7 +18,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="h-full w-48 border-r border-base-content/20 overflow-auto py-6 px-3">
+        <div className="hidden tablet:block h-full min-w-[160px] w-48 border-r border-base-content/20 overflow-auto py-6 px-3">
             {sidebarOptions.map((options, key) => (
                 <div
                     key={key}

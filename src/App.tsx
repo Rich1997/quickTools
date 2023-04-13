@@ -11,9 +11,7 @@ function App() {
                 <Navbar />
                 <ContentLayout>
                     <Sidebar />
-                    <div>
-                        <Hero />
-                    </div>
+                    <Hero />
                 </ContentLayout>
             </PageLayout>
         </div>
