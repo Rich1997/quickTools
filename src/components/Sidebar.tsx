@@ -22,7 +22,7 @@ const Sidebar = () => {
             {sidebarOptions.map((options, key) => (
                 <div
                     key={key}
-                    className="flex items-center gap-2 text-sm py-2 px-3 rounded hover:bg-primary hover:text-primary-content"
+                    className="flex items-center gap-2 text-sm py-2 px-3 rounded hover:bg-base-content/20"
                 >
                     {options.icon} {options.option}
                 </div>
