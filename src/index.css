@@ -48,6 +48,10 @@ html {
     font-variation-settings: 'slnt' -12;
 }
 
+.select:focus {
+    outline: none !important;
+}
+
 /* Default border */
 .d-b {
     @apply border border-base-content/20;
