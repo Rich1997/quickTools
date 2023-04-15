@@ -7,7 +7,6 @@ module.exports = {
                 inter: ['Inter var', 'sans-serif'],
                 roboto_flex: ['Roboto flex', 'sans-serif'],
             },
-            colors: {},
         },
         screens: {
             phone: '320px',
@@ -68,11 +67,12 @@ module.exports = {
             'winter',
             {
                 neon: {
-                    primary: '#8b5cf6',
+                    primary: '#9900ff',
                     secondary: '#e879f9',
                     accent: '#f9a8d4',
                     neutral: '#191D24',
-                    'base-100': '#111827',
+                    'base-100': '#0f0a17',
+                    'base-200': '#241837',
                     info: '#67e8f9',
                     success: '#6ee7b7',
                     warning: '#fcd34d',
@@ -85,6 +85,6 @@ module.exports = {
         logs: true,
         rtl: false,
         prefix: '',
-        darkTheme: 'dark',
+        darkTheme: 'neon',
     },
 };
