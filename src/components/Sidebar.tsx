@@ -35,24 +35,22 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="fixed top-16 bottom-0">
-            <div className="hidden tablet:flex flex-col gap-1 h-full min-w-[160px] w-48 border-r border-base-content/20 bg-base-100 overflow-auto py-6 px-3">
-                {sidebarOptions.map((options, key) => (
-                    <NavLink
-                        key={key}
-                        to={options.path}
-                        className={({ isActive }) =>
-                            isActive
-                                ? 'bg-primary text-primary-content rounded block'
-                                : ''
-                        }
-                    >
-                        <div className="flex items-center gap-2 text-sm py-2 px-3 rounded hover:bg-base-content/20">
-                            {options.icon} {options.option}
-                        </div>
-                    </NavLink>
-                ))}
-            </div>
+        <div className="fixed top-16 bottom-0 h-full hidden tablet:flex flex-col gap-1 min-w-[160px] w-48 border-r border-base-content/20 bg-base-100 overflow-auto py-6 px-3">
+            {sidebarOptions.map((options, key) => (
+                <NavLink
+                    key={key}
+                    to={options.path}
+                    className={({ isActive }) =>
+                        isActive
+                            ? 'bg-primary text-primary-content rounded block'
+                            : ''
+                    }
+                >
+                    <div className="flex items-center gap-2 text-sm py-2 px-3 rounded hover:bg-base-content/20">
+                        {options.icon} {options.option}
+                    </div>
+                </NavLink>
+            ))}
         </div>
     );
 };

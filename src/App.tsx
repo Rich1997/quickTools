@@ -15,7 +15,6 @@ function App() {
             <Navbar />
             <PageLayout>
                 <Sidebar />
-
                 <ContentLayout>
                     <ToolSpace>
                         <Routes>
