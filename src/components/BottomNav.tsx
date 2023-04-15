@@ -35,7 +35,7 @@ const BottomNav = () => {
     ];
 
     return (
-        <div className="flex tablet:hidden w-full h-fit justify-around p-3 border-t border-base-content/20 overflow-auto relative">
+        <div className="flex tablet:hidden w-full h-fit justify-around p-3 border-t border-base-content/20 overflow-auto">
             {sidebarOptions.map((options, key) => (
                 <NavLink
                     key={key}
@@ -48,7 +48,7 @@ const BottomNav = () => {
                 >
                     <div
                         key={key}
-                        className="flex items-center justify-center p-3 w-20 text-xs rounded hover:bg-base-content/20"
+                        className="flex items-center justify-center p-3 w-14 text-xs rounded hover:bg-base-content/20"
                     >
                         <div>{options.icon}</div>
                     </div>
