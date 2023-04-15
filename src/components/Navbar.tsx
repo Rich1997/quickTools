@@ -5,7 +5,7 @@ import ThemeSelectorMobile from './ThemeSelectorMobile';
 
 const Navbar = () => {
     return (
-        <div className="border-b border-base-content/20">
+        <div className="fixed top-0 w-full border-b border-base-content/20 h-16 bg-base-100">
             <div className="flex items-center justify-between gap-4 flex-wrap text-base-content py-4 px-6 max-w-6xl mx-auto">
                 <div className="tracking-tight text-2xl">
                     <span className="font-black italic ital">quick</span>

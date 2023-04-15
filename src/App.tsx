@@ -12,10 +12,11 @@ import Recents from './pages/Recents';
 function App() {
     return (
         <div className="w-full min-h-screen h-screen">
+            <Navbar />
             <PageLayout>
-                <Navbar />
+                <Sidebar />
+
                 <ContentLayout>
-                    <Sidebar />
                     <ToolSpace>
                         <Routes>
                             <Route path="/" element={<Dashboard />} />
@@ -26,8 +27,8 @@ function App() {
                         <div>hello</div>
                     </RelatedSpace>
                 </ContentLayout>
-                <BottomNav />
             </PageLayout>
+            <BottomNav />
         </div>
     );
 }

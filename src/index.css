@@ -44,6 +44,10 @@ html {
     font-feature-settings: 'rlig' 1, 'calt' 0;
 }
 
+body {
+    min-height: 100%;
+}
+
 .ital {
     font-variation-settings: 'slnt' -12;
 }

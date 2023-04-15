@@ -35,7 +35,7 @@ const BottomNav = () => {
     ];
 
     return (
-        <div className="flex tablet:hidden w-full h-fit justify-around p-3 border-t border-base-content/20 overflow-auto">
+        <div className="fixed bottom-0 flex tablet:hidden w-full h-fit justify-around p-3 border-t border-base-content/20 overflow-auto bg-base-100">
             {sidebarOptions.map((options, key) => (
                 <NavLink
                     key={key}
