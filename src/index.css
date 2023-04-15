@@ -52,10 +52,6 @@ html {
     outline: none !important;
 }
 
-.active {
-    @apply bg-primary;
-}
-
 /* Default border */
 .d-b {
     @apply border border-base-content/20;
