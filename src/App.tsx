@@ -1,8 +1,10 @@
 import ContentLayout from './components/ContentLayout';
-import Hero from './components/Hero';
+import ToolSpace from './components/ToolSpace';
 import Navbar from './components/Navbar';
 import PageLayout from './components/PageLayout';
 import Sidebar from './components/Sidebar';
+import RelatedSpace from './components/RelatedSpace';
+import BottomNav from './components/BottomNav';
 
 function App() {
     return (
@@ -11,8 +13,14 @@ function App() {
                 <Navbar />
                 <ContentLayout>
                     <Sidebar />
-                    <Hero />
+                    <ToolSpace>
+                        <div>hello</div>
+                    </ToolSpace>
+                    <RelatedSpace>
+                        <div>hello</div>
+                    </RelatedSpace>
                 </ContentLayout>
+                <BottomNav />
             </PageLayout>
         </div>
     );
