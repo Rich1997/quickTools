@@ -1,5 +1,4 @@
 import {
-    BlendingModeIcon,
     CheckIcon,
     ChevronDownIcon,
     ChevronUpIcon,
@@ -17,9 +16,6 @@ const Selector = (props: {
         <Select.Root value={value} onValueChange={setValue}>
             <Select.Trigger className="text-sm leading-none text-base-content p-2 d-s d-s-h">
                 <div className="flex items-center justify-center gap-1">
-                    <Select.Icon>
-                        <BlendingModeIcon />
-                    </Select.Icon>
                     <Select.Value aria-label={props.name}>
                         {value.charAt(0).toUpperCase() + value.slice(1)}
                     </Select.Value>
