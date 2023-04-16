@@ -24,7 +24,9 @@ const LengthConverter = () => {
                     />
                 </div>
                 <div className="flex justify-center">
-                    <ShuffleIcon />
+                    <div className="p-4 rounded-full bg-accent text-accent-content">
+                        <ShuffleIcon />
+                    </div>
                 </div>
                 <div className="flex flex-col">
                     <Selector
