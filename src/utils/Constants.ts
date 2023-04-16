@@ -32,4 +32,16 @@ export const themes = [
     { value: 'winter', option: 'Winter' },
 ];
 
-// export const lengths = [{ option: 'Nanometers' }];
+export const lengths = [
+    { option: 'Meters' },
+    { option: 'Kilometers' },
+    { option: 'Centimeters' },
+    { option: 'Millimeters' },
+    { option: 'Micrometers' },
+    { option: 'Nanometers' },
+    { option: 'Miles' },
+    { option: 'Yards' },
+    { option: 'Feet' },
+    { option: 'Inches' },
+    { option: 'Nautical miles' },
+];

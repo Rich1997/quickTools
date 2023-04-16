@@ -8,7 +8,7 @@ import * as Select from '@radix-ui/react-select';
 const Selector = (props: {
     name: string;
     default: string;
-    data: { value: string; option: string }[];
+    data: { option: string }[];
     onChange: (value: string) => void;
 }) => {
     return (
@@ -18,8 +18,8 @@ const Selector = (props: {
                     value={props.default}
                     onValueChange={props.onChange}
                 >
-                    <Select.Trigger className="text-sm leading-none text-base-content p-2 d-s d-s-h">
-                        <div className="flex items-center justify-center gap-1">
+                    <Select.Trigger className="text-sm w-full leading-none text-base-content px-4 py-2 d-s d-s-h">
+                        <div className="flex items-center justify-between gap-1">
                             <Select.Value aria-label={props.name}>
                                 {props.default.charAt(0).toUpperCase() +
                                     props.default.slice(1)}
@@ -41,7 +41,7 @@ const Selector = (props: {
                                 {props.data.map((dataOption, key) => (
                                     <Select.Item
                                         key={key}
-                                        value={dataOption.value}
+                                        value={dataOption.option}
                                         className="flex items-center h-6 px-6 relative select-none cursor-pointer data-[disabled]:text-primary data-[disabled]:bg-primary/50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-primary data-[highlighted]:text-primary-content rounded text-base-content/70"
                                     >
                                         <Select.ItemIndicator className="absolute left-0 w-6 inline-flex items-center justify-center">
@@ -62,13 +62,13 @@ const Selector = (props: {
             </div>
             <div className="tablet:hidden block">
                 <select
-                    className="rounded pl-4 text-base-content leading-none text-sm select select-bordered select-sm w-32"
+                    className="rounded pl-4 w-full text-base-content leading-none text-sm select select-bordered"
                     onChange={(e) => props.onChange(e.target.value)}
                     value={props.default}
                 >
                     {props.data.map((dataOption, key) => {
                         return (
-                            <option key={key} value={dataOption.value}>
+                            <option key={key} value={dataOption.option}>
                                 {dataOption.option}
                             </option>
                         );
