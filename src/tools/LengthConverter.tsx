@@ -20,7 +20,7 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         placeholder="0"
-                        className="w-full rounded-b bg-base-200 p-4 -mt-1 border-x border-b border-base-content/20"
+                        className="w-full input rounded-none rounded-b bg-base-100 p-4 -mt-1 border-x border-b border-base-content/20"
                     />
                 </div>
                 <div className="flex justify-center">
@@ -36,7 +36,7 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         placeholder="0"
-                        className="w-full rounded-b bg-base-200 p-4 -mt-1 border-x border-b border-base-content/20"
+                        className="w-full input rounded-none rounded-b bg-base-100 p-4 -mt-1 border-x border-b border-base-content/20"
                     />
                 </div>
             </div>
