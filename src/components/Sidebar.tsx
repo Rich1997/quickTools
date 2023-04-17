@@ -35,7 +35,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="fixed top-16 bottom-0 h-full hidden tablet:flex flex-col gap-1 min-w-[160px] w-48 border-r border-base-content/20 bg-base-100 overflow-auto py-6 px-3 select-none">
+        <div className="fixed top-16 bottom-0 hidden tablet:flex flex-col gap-1 min-w-[160px] w-48 border-r border-base-content/20 bg-base-100 overflow-auto py-6 px-3 select-none">
             {sidebarOptions.map((options, key) => (
                 <NavLink
                     key={key}
