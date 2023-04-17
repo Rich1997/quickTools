@@ -8,9 +8,32 @@ import * as Select from '@radix-ui/react-select';
 const Selector = (props: {
     name: string;
     default: string;
-    data: { option: string }[];
+    data: {
+        [unit: string]: {
+            factor: number;
+        };
+    };
     onChange: (value: string) => void;
 }) => {
+    const lengthOptions = Object.entries(props.data).map(([unit]) => (
+        <Select.Item
+            key={unit}
+            value={unit}
+            className="flex items-center h-6 px-6 relative select-none cursor-pointer data-[disabled]:text-primary data-[disabled]:bg-primary/50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-primary data-[highlighted]:text-primary-content rounded text-base-content/70"
+        >
+            <Select.ItemIndicator className="absolute left-0 w-6 inline-flex items-center justify-center">
+                <CheckIcon />
+            </Select.ItemIndicator>
+            <Select.ItemText className="border border-primary">
+                {unit}
+            </Select.ItemText>
+        </Select.Item>
+    ));
+    const lengthOptionsMobile = Object.entries(props.data).map(([unit]) => (
+        <option key={unit} value={unit}>
+            {unit}
+        </option>
+    ));
     return (
         <>
             <div className="tablet:block hidden">
@@ -38,20 +61,7 @@ const Selector = (props: {
                                 <ChevronUpIcon />
                             </Select.ScrollUpButton>
                             <Select.Viewport className="p-1">
-                                {props.data.map((dataOption, key) => (
-                                    <Select.Item
-                                        key={key}
-                                        value={dataOption.option}
-                                        className="flex items-center h-6 px-6 relative select-none cursor-pointer data-[disabled]:text-primary data-[disabled]:bg-primary/50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-primary data-[highlighted]:text-primary-content rounded text-base-content/70"
-                                    >
-                                        <Select.ItemIndicator className="absolute left-0 w-6 inline-flex items-center justify-center">
-                                            <CheckIcon />
-                                        </Select.ItemIndicator>
-                                        <Select.ItemText className="border border-primary">
-                                            {dataOption.option}
-                                        </Select.ItemText>
-                                    </Select.Item>
-                                ))}
+                                {lengthOptions}
                             </Select.Viewport>
                             <Select.ScrollDownButton className="flex items-center justify-center h-6 cursor-default">
                                 <ChevronDownIcon />
@@ -66,13 +76,7 @@ const Selector = (props: {
                     onChange={(e) => props.onChange(e.target.value)}
                     value={props.default}
                 >
-                    {props.data.map((dataOption, key) => {
-                        return (
-                            <option key={key} value={dataOption.option}>
-                                {dataOption.option}
-                            </option>
-                        );
-                    })}
+                    {lengthOptionsMobile}
                 </select>
             </div>
         </>

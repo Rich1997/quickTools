@@ -32,16 +32,16 @@ export const themes = [
     { value: 'winter', option: 'Winter' },
 ];
 
-export const lengths = [
-    { option: 'Meters' },
-    { option: 'Kilometers' },
-    { option: 'Centimeters' },
-    { option: 'Millimeters' },
-    { option: 'Micrometers' },
-    { option: 'Nanometers' },
-    { option: 'Miles' },
-    { option: 'Yards' },
-    { option: 'Feet' },
-    { option: 'Inches' },
-    { option: 'Nautical miles' },
-];
+export const lengths = {
+    Meters: { factor: 1 },
+    Kilometers: { factor: 1000 },
+    Centimeters: { factor: 0.01 },
+    Millimeters: { factor: 0.001 },
+    Micrometers: { factor: 0.000001 },
+    Nanometers: { factor: 0.000000001 },
+    Miles: { factor: 1609.344 },
+    Yards: { factor: 0.9144 },
+    Feet: { factor: 0.3048 },
+    Inches: { factor: 0.0254 },
+    'Nautical miles': { factor: 1852 },
+};
