@@ -68,7 +68,7 @@ module.exports = {
             {
                 neon: {
                     ...require('daisyui/src/colors/themes')[
-                        '[data-theme=dark]'
+                        '[data-theme=night]'
                     ],
                     primary: '#9900ff',
                     secondary: '#e879f9',

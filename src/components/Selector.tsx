@@ -18,7 +18,7 @@ const Selector = (props: {
                     value={props.default}
                     onValueChange={props.onChange}
                 >
-                    <Select.Trigger className="text-sm w-full leading-none text-base-content px-4 py-2 d-s d-s-h">
+                    <Select.Trigger className="relative text-sm w-full leading-none text-base-content px-4 py-2 bg-base-100 rounded-t focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none d-b d-s-h">
                         <div className="flex items-center justify-between gap-1">
                             <Select.Value aria-label={props.name}>
                                 {props.default.charAt(0).toUpperCase() +
@@ -62,7 +62,7 @@ const Selector = (props: {
             </div>
             <div className="tablet:hidden block">
                 <select
-                    className="rounded pl-4 w-full text-base-content leading-none text-sm select select-bordered"
+                    className="rounded-t rounded-b-none pl-4 w-full text-base-content leading-none text-sm select select-bordered"
                     onChange={(e) => props.onChange(e.target.value)}
                     value={props.default}
                 >

@@ -10,7 +10,7 @@ const LengthConverter = () => {
         <>
             <div className="text-lg font-bold pb-8">Length Converter</div>
             <div className="flex tablet:items-center gap-6 tablet:flex-row flex-col w-full">
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                     <Selector
                         name="length converter"
                         default={firstUnit}
@@ -20,7 +20,7 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         placeholder="0"
-                        className="w-full input rounded-none rounded-b bg-base-100 p-4 -mt-1 border-x border-b border-base-content/20"
+                        className="w-full rounded-none rounded-b bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none d-b"
                     />
                 </div>
                 <div className="flex justify-center">
@@ -28,7 +28,7 @@ const LengthConverter = () => {
                         <ShuffleIcon />
                     </div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-2">
                     <Selector
                         name="length converter"
                         default={secondUnit}
@@ -38,7 +38,7 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         placeholder="0"
-                        className="w-full input rounded-none rounded-b bg-base-100 p-4 -mt-1 border-x border-b border-base-content/20"
+                        className="w-full rounded-none rounded-b bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none d-b"
                     />
                 </div>
             </div>
