@@ -67,6 +67,9 @@ module.exports = {
             'winter',
             {
                 neon: {
+                    ...require('daisyui/src/colors/themes')[
+                        '[data-theme=dark]'
+                    ],
                     primary: '#9900ff',
                     secondary: '#e879f9',
                     accent: '#f9a8d4',
