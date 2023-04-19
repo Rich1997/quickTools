@@ -11,7 +11,7 @@ const LengthConverter = () => {
     return (
         <>
             <div className="text-lg font-bold pb-8">Length Converter</div>
-            <div className="flex tablet:items-center gap-6 tablet:flex-row flex-col w-full">
+            <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full">
                 <div className="flex flex-col gap-2">
                     <Selector
                         name="length converter"
