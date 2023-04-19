@@ -1,41 +1,42 @@
-import {
-    CounterClockwiseClockIcon,
-    CubeIcon,
-    DashboardIcon,
-    StarIcon,
-} from '@radix-ui/react-icons';
 import { NavLink } from 'react-router-dom';
+import {
+    MdOutlineSpaceDashboard,
+    MdHistory,
+    MdOutlineFavoriteBorder,
+} from 'react-icons/md';
+
+import { TbTools } from 'react-icons/tb';
 
 const BottomNav = () => {
     const sidebarOptions = [
         {
             value: 'dashboard',
             option: 'Dashboard',
-            icon: <DashboardIcon />,
+            icon: <MdOutlineSpaceDashboard size={24} />,
             path: '/',
         },
         {
             value: 'recents',
             option: 'Recents',
-            icon: <CounterClockwiseClockIcon />,
+            icon: <MdHistory size={24} />,
             path: 'recents',
         },
         {
             value: 'favorites',
             option: 'Favorites',
-            icon: <StarIcon />,
+            icon: <MdOutlineFavoriteBorder size={24} />,
             path: '/ggg',
         },
         {
             value: 'tools',
             option: 'Tools',
-            icon: <CubeIcon />,
+            icon: <TbTools size={24} />,
             path: '/whatever',
         },
     ];
 
     return (
-        <div className="fixed bottom-0 flex tablet:hidden w-full h-fit justify-around p-3 border-t border-base-content/20 overflow-auto bg-base-100">
+        <div className="fixed bottom-0 flex tablet:hidden w-full h-fit justify-between py-3 px-6 border-t border-base-content/20 overflow-auto bg-base-100">
             {sidebarOptions.map((options, key) => (
                 <NavLink
                     key={key}
@@ -48,7 +49,7 @@ const BottomNav = () => {
                 >
                     <div
                         key={key}
-                        className="flex items-center justify-center p-3 w-14 text-xs rounded hover:bg-base-content/20"
+                        className="flex items-center justify-center py-3 w-14 text-xs rounded hover:bg-base-content/20"
                     >
                         <div>{options.icon}</div>
                     </div>
