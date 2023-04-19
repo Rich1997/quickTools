@@ -1,35 +1,36 @@
-import {
-    CounterClockwiseClockIcon,
-    CubeIcon,
-    DashboardIcon,
-    StarIcon,
-} from '@radix-ui/react-icons';
 import { NavLink } from 'react-router-dom';
+import {
+    MdOutlineSpaceDashboard,
+    MdHistory,
+    MdOutlineFavoriteBorder,
+} from 'react-icons/md';
+
+import { TbTools } from 'react-icons/tb';
 
 const Sidebar = () => {
     const sidebarOptions = [
         {
             value: 'dashboard',
             option: 'Dashboard',
-            icon: <DashboardIcon />,
+            icon: <MdOutlineSpaceDashboard size={16} />,
             path: '/',
         },
         {
             value: 'recents',
             option: 'Recents',
-            icon: <CounterClockwiseClockIcon />,
+            icon: <MdHistory size={16} />,
             path: 'recents',
         },
         {
             value: 'favorites',
             option: 'Favorites',
-            icon: <StarIcon />,
+            icon: <MdOutlineFavoriteBorder size={16} />,
             path: '/ggg',
         },
         {
             value: 'tools',
             option: 'Tools',
-            icon: <CubeIcon />,
+            icon: <TbTools size={16} />,
             path: '/whatever',
         },
     ];
