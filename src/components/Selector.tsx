@@ -16,7 +16,7 @@ const Selector = (props: {
         <Select.Item
             key={unit}
             value={unit}
-            className="flex items-center h-6 px-6 relative select-none cursor-pointer data-[disabled]:text-primary data-[disabled]:bg-primary/50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-primary data-[highlighted]:text-primary-content rounded-md text-base-content/70"
+            className="flex items-center h-6 px-6 relative select-none cursor-pointer data-[disabled]:text-primary data-[disabled]:bg-primary/50 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-primary data-[highlighted]:text-primary-content rounded text-base-content/70"
         >
             <Select.ItemIndicator className="absolute left-0 w-6 inline-flex items-center justify-center">
                 <MdCheck size={16} />
