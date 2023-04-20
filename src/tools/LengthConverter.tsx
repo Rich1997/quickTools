@@ -29,7 +29,7 @@ const LengthConverter = () => {
                 </div>
                 <div className="flex justify-center">
                     <div className="p-4 rounded-full bg-accent text-accent-content">
-                        <TbArrowsShuffle2 />
+                        <TbArrowsShuffle2 strokeWidth={2} />
                     </div>
                 </div>
                 <div className="flex flex-col gap-2">
