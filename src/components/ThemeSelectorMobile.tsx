@@ -12,7 +12,7 @@ const ThemeSelectorMobile = () => {
     return (
         <div className="tablet:hidden block">
             <select
-                className="rounded pl-4 text-base-content leading-none text-sm select select-bordered select-sm w-32"
+                className="rounded-md pl-4 text-base-content leading-none text-sm select select-bordered select-sm w-32"
                 onChange={(e) => {
                     setTheme(e.target.value);
                 }}

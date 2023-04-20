@@ -43,13 +43,13 @@ const BottomNav = () => {
                     to={options.path}
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-primary text-primary-content rounded flex'
+                            ? 'bg-primary text-primary-content rounded-md flex'
                             : 'flex'
                     }
                 >
                     <div
                         key={key}
-                        className="flex items-center justify-center py-3 w-14 text-xs rounded hover:bg-base-content/20"
+                        className="flex items-center justify-center py-3 w-14 text-xs rounded-md hover:bg-base-content/20"
                     >
                         <div>{options.icon}</div>
                     </div>

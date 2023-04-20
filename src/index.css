@@ -69,7 +69,7 @@ body {
 
 /* Default surface */
 .d-s {
-    @apply bg-base-100 rounded d-b;
+    @apply bg-base-100 rounded-md d-b;
 }
 
 /* Default surface hover */

@@ -4,7 +4,6 @@ import {
     MdHistory,
     MdOutlineFavoriteBorder,
 } from 'react-icons/md';
-
 import { TbTools } from 'react-icons/tb';
 
 const Sidebar = () => {
@@ -43,11 +42,11 @@ const Sidebar = () => {
                     to={options.path}
                     className={({ isActive }) =>
                         isActive
-                            ? 'bg-primary text-primary-content rounded block'
+                            ? 'bg-primary text-primary-content rounded-md block'
                             : ''
                     }
                 >
-                    <div className="flex items-center gap-2 text-sm py-2 px-3 rounded hover:bg-base-content/20">
+                    <div className="flex items-center gap-2 text-sm py-2 px-3 rounded-md hover:bg-base-content/20">
                         {options.icon} {options.option}
                     </div>
                 </NavLink>

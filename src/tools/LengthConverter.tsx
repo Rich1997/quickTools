@@ -1,5 +1,5 @@
-import { ShuffleIcon } from '@radix-ui/react-icons';
 import { useState } from 'react';
+import { TbArrowsShuffle2 } from 'react-icons/tb';
 import Selector from '../components/Selector';
 import { lengths } from '../utils/Constants';
 
@@ -22,14 +22,14 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         placeholder="0"
-                        className="w-full rounded-none rounded-b bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
+                        className="w-full rounded-none rounded-b-md bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
                         onChange={(e) => setFirstValue(Number(e.target.value))}
                     />
                     {firstValue}
                 </div>
                 <div className="flex justify-center">
                     <div className="p-4 rounded-full bg-accent text-accent-content">
-                        <ShuffleIcon />
+                        <TbArrowsShuffle2 />
                     </div>
                 </div>
                 <div className="flex flex-col gap-2">
@@ -42,7 +42,7 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         placeholder="0"
-                        className="w-full rounded-none rounded-b bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
+                        className="w-full rounded-none rounded-b-md bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
                         onChange={(e) => setSecondValue(Number(e.target.value))}
                     />
                     {secondValue}

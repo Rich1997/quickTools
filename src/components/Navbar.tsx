@@ -1,5 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import { DotsVerticalIcon, GitHubLogoIcon } from '@radix-ui/react-icons';
+import { RxDotsVertical, RxGithubLogo } from 'react-icons/rx';
 import ThemeSelector from './ThemeSelector';
 import ThemeSelectorMobile from './ThemeSelectorMobile';
 
@@ -18,18 +18,18 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-6">
                         <ThemeSelector />
-                        <GitHubLogoIcon />
+                        <RxGithubLogo size={14} />
                     </div>
                 </div>
                 <Dialog.Root>
                     <Dialog.Trigger asChild>
                         <div className="tablet:hidden block cursor-pointer p-2 d-s">
-                            <DotsVerticalIcon />
+                            <RxDotsVertical size={14} strokeWidth={2} />
                         </div>
                     </Dialog.Trigger>
                     <Dialog.Portal>
                         <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0" />
-                        <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed min-[0px]:top-[246px] max-[346px]:top-[246px] min-[355px]:top-[222px] left-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%] focus:outline-none bg-base-100 rounded d-b">
+                        <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed min-[0px]:top-[246px] max-[346px]:top-[246px] min-[355px]:top-[222px] left-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%] focus:outline-none bg-base-100 rounded-md d-b">
                             <div className="flex flex-col gap-6 p-8">
                                 <div>Docs</div>
                                 <div>About</div>
