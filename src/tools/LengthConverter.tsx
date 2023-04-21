@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TbArrowsShuffle2 } from 'react-icons/tb';
+import { TbArrowsRightLeft } from 'react-icons/tb';
 import Selector from '../components/Selector';
 import { lengths } from '../utils/Constants';
 
@@ -27,9 +27,9 @@ const LengthConverter = () => {
                     />
                     {firstValue}
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center rotate-90 tablet:rotate-0">
                     <div className="p-4 rounded-full bg-accent text-accent-content">
-                        <TbArrowsShuffle2 strokeWidth={2} />
+                        <TbArrowsRightLeft strokeWidth={3} />
                     </div>
                 </div>
                 <div className="flex flex-col gap-2">
