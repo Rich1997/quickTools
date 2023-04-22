@@ -32,7 +32,13 @@ export const themes = [
     { value: 'winter', option: 'Winter' },
 ];
 
-export const lengths = {
+interface Lengths {
+    [key: string]: {
+        factor: number;
+    };
+}
+
+export const lengths: Lengths = {
     Meters: { factor: 1 },
     Kilometers: { factor: 1000 },
     Centimeters: { factor: 0.01 },
