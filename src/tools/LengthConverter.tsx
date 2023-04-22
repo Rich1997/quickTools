@@ -68,16 +68,14 @@ const LengthConverter = () => {
                 </div>
                 <div className="flex justify-center">
                     <div
-                        className="tablet:tooltip tablet:tooltip-primary pt-1"
+                        className="tablet:tooltip pt-1"
                         data-tip="Reset"
+                        onClick={() => {
+                            setFirstValue('');
+                            setSecondValue('');
+                        }}
                     >
-                        <div
-                            className="p-4 rounded-full bg-accent text-accent-content transform active:scale-75 transition-transform cursor-pointer rotate-90 tablet:rotate-0"
-                            onClick={() => {
-                                setFirstValue('');
-                                setSecondValue('');
-                            }}
-                        >
+                        <div className="p-4 rounded-full bg-accent text-accent-content transform active:scale-75 transition-transform cursor-pointer rotate-90 tablet:rotate-0">
                             <TbArrowsRightLeft strokeWidth={3} />
                         </div>
                     </div>
