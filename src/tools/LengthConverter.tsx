@@ -66,9 +66,17 @@ const LengthConverter = () => {
                         onChange={(e) => handleFirstInputChange(e.target.value)}
                     />
                 </div>
-                <div className="flex justify-center rotate-90 tablet:rotate-0">
-                    <div className="p-4 rounded-full bg-accent text-accent-content">
-                        <TbArrowsRightLeft strokeWidth={3} />
+                <div className="flex justify-center">
+                    <div className="tooltip pt-2" data-tip="Reset">
+                        <div
+                            className="p-4 rounded-full bg-accent text-accent-content transform active:scale-75 transition-transform cursor-pointer rotate-90 tablet:rotate-0"
+                            onClick={() => {
+                                setFirstValue('');
+                                setSecondValue('');
+                            }}
+                        >
+                            <TbArrowsRightLeft strokeWidth={3} />
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-2">
