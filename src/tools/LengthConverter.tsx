@@ -20,6 +20,10 @@ const LengthConverter = () => {
         return (value * fromFactor) / toFactor;
     };
 
+    const factor = (
+        lengths[firstUnit].factor / lengths[secondUnit].factor
+    ).toString();
+
     const handleFirstInputChange = (value: string): void => {
         setFirstValue(value);
         setSecondValue(
@@ -50,8 +54,10 @@ const LengthConverter = () => {
 
     return (
         <>
-            <div className="text-lg font-bold pb-8">Length Converter</div>
-            <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full">
+            <div className="text-lg font-bold tracking-tight  pb-8">
+                Length Converter
+            </div>
+            <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full pb-8">
                 <div className="flex flex-col gap-2">
                     <Selector
                         name="From"
@@ -93,6 +99,25 @@ const LengthConverter = () => {
                         }
                     />
                 </div>
+            </div>
+            {firstValue && (
+                <>
+                    <div className="flex gap-4 text-sm items-center pb-4">
+                        <div className="px-2 py-1 bg-accent text-accent-content rounded-md">
+                            Result
+                        </div>
+                        <div>
+                            {firstValue + ' ' + firstUnit} ={' '}
+                            {secondValue + ' ' + secondUnit}
+                        </div>
+                    </div>
+                </>
+            )}
+            <div className="flex gap-4 text-sm items-center">
+                <div className="px-2 py-1 bg-accent text-accent-content rounded-md">
+                    Formula
+                </div>
+                <div>multiply the length value by {Number(factor)}</div>
             </div>
         </>
     );
