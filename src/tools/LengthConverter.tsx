@@ -103,7 +103,7 @@ const LengthConverter = () => {
             {Number(firstValue) && Number(secondValue) !== 0 ? (
                 <>
                     <div className="flex gap-4 text-sm items-center pb-4">
-                        <div className="px-2 py-1 bg-accent text-accent-content rounded-md">
+                        <div className="px-2 py-1 bg-success text-success-content rounded-md">
                             Result
                         </div>
                         <div>
@@ -116,7 +116,7 @@ const LengthConverter = () => {
                 ''
             )}
             <div className="flex gap-4 text-sm items-center">
-                <div className="px-2 py-1 bg-accent text-accent-content rounded-md">
+                <div className="px-2 py-1 bg-info text-info-content rounded-md">
                     Formula
                 </div>
                 <div>multiply the length value by {Number(factor)}</div>
