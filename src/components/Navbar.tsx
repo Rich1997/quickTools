@@ -1,5 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { RxDotsVertical, RxGithubLogo } from 'react-icons/rx';
+import Anchor from './Anchor';
 import ThemeSelector from './ThemeSelector';
 import ThemeSelectorMobile from './ThemeSelectorMobile';
 
@@ -19,7 +20,12 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center gap-6">
                         <ThemeSelector />
-                        <RxGithubLogo size={14} />
+                        <Anchor
+                            href="https://github.com/Rich1997/quickTools"
+                            hoverColor={true}
+                        >
+                            <RxGithubLogo size={14} />
+                        </Anchor>
                     </div>
                 </div>
                 <Dialog.Root>
@@ -33,12 +39,11 @@ const Navbar = () => {
                         <Dialog.Content className="block tablet:hidden overflow-auto data-[state=open]:animate-contentShow fixed min-[0px]:top-[246px] max-[346px]:top-[246px] min-[355px]:top-[222px] left-[50%] max-h-[85vh] w-[90vw] translate-x-[-50%] translate-y-[-50%] focus:outline-none bg-base-100 rounded-md d-b">
                             <div className="flex flex-col gap-2 p-4">
                                 {menuItems.map((options, key) => (
-                                    <div
-                                        className="py-2 px-4 rounded-md hover:bg-base-content/20"
-                                        key={key}
-                                    >
-                                        {options.item}
-                                    </div>
+                                    <Anchor href="" key={key}>
+                                        <div className="py-2 px-4 rounded-md hover:bg-base-content/20">
+                                            {options.item}
+                                        </div>
+                                    </Anchor>
                                 ))}
                             </div>
                             <div className="p-8 flex gap-6 flex-wrap items-center border-t border-base-content/10">
