@@ -4,8 +4,8 @@ import Selector from '../components/Selector';
 import { lengths } from '../utils/Constants';
 
 const LengthConverter = () => {
-    const [firstValue, setFirstValue] = useState<number>(0);
-    const [secondValue, setSecondValue] = useState<number>(0);
+    const [firstValue, setFirstValue] = useState<string>('');
+    const [secondValue, setSecondValue] = useState<string>('');
     const [firstUnit, setFirstUnit] = useState<string>('Feet');
     const [secondUnit, setSecondUnit] = useState<string>('Inches');
 
@@ -20,23 +20,31 @@ const LengthConverter = () => {
     };
 
     const handleFirstInputChange = (value: string): void => {
-        setFirstValue(Number(value));
-        setSecondValue(calculateLength(Number(value), firstUnit, secondUnit));
+        setFirstValue(value);
+        setSecondValue(
+            calculateLength(Number(value), firstUnit, secondUnit).toString()
+        );
     };
 
     const handleSecondInputChange = (value: string): void => {
-        setSecondValue(Number(value));
-        setFirstValue(calculateLength(Number(value), secondUnit, firstUnit));
+        setSecondValue(value);
+        setFirstValue(
+            calculateLength(Number(value), secondUnit, firstUnit).toString()
+        );
     };
 
     const handleFirstUnitChange = (value: string): void => {
         setFirstUnit(value);
-        setSecondValue(calculateLength(firstValue, value, secondUnit));
+        setSecondValue(
+            calculateLength(Number(firstValue), value, secondUnit).toString()
+        );
     };
 
     const handleSecondUnitChange = (value: string): void => {
         setSecondUnit(value);
-        setFirstValue(calculateLength(secondValue, value, firstUnit));
+        setFirstValue(
+            calculateLength(Number(secondValue), value, firstUnit).toString()
+        );
     };
 
     return (
