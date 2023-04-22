@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { TbArrowsRightLeft } from 'react-icons/tb';
+import { TbRefresh } from 'react-icons/tb';
+import ActionButton from '../components/ActionButton';
 import Selector from '../components/Selector';
 import { lengths } from '../utils/Constants';
 
@@ -66,20 +67,15 @@ const LengthConverter = () => {
                         onChange={(e) => handleFirstInputChange(e.target.value)}
                     />
                 </div>
-                <div className="flex justify-center">
-                    <div
-                        className="tablet:tooltip pt-1"
-                        data-tip="Reset"
-                        onClick={() => {
-                            setFirstValue('');
-                            setSecondValue('');
-                        }}
-                    >
-                        <div className="p-4 rounded-full bg-accent text-accent-content transform active:scale-75 transition-transform cursor-pointer rotate-90 tablet:rotate-0">
-                            <TbArrowsRightLeft strokeWidth={3} />
-                        </div>
-                    </div>
-                </div>
+                <ActionButton
+                    action="Reset"
+                    clickHandler={() => {
+                        setFirstValue('');
+                        setSecondValue('');
+                    }}
+                >
+                    <TbRefresh strokeWidth={3} />
+                </ActionButton>
                 <div className="flex flex-col gap-2">
                     <Selector
                         name="To"
