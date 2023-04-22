@@ -33,7 +33,7 @@ const Selector = (props: {
     ));
     return (
         <>
-            <div className="tablet:block hidden">
+            <div className="tablet:block hidden select-none">
                 <Select.Root
                     value={props.default}
                     onValueChange={props.onChange}

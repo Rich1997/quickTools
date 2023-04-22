@@ -61,13 +61,16 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         className="w-full rounded-none rounded-b-md bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
-                        placeholder="Enter value"
+                        placeholder="0"
                         value={firstValue}
                         onChange={(e) => handleFirstInputChange(e.target.value)}
                     />
                 </div>
                 <div className="flex justify-center">
-                    <div className="tooltip pt-2" data-tip="Reset">
+                    <div
+                        className="tablet:tooltip tablet:tooltip-primary pt-1"
+                        data-tip="Reset"
+                    >
                         <div
                             className="p-4 rounded-full bg-accent text-accent-content transform active:scale-75 transition-transform cursor-pointer rotate-90 tablet:rotate-0"
                             onClick={() => {
@@ -89,7 +92,7 @@ const LengthConverter = () => {
                     <input
                         type="number"
                         className="w-full rounded-none rounded-b-md bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
-                        placeholder="Enter value"
+                        placeholder="0"
                         value={secondValue}
                         onChange={(e) =>
                             handleSecondInputChange(e.target.value)
