@@ -54,7 +54,7 @@ const LengthConverter = () => {
 
     return (
         <>
-            <div className="text-lg font-bold tracking-tight  pb-8">
+            <div className="text-lg font-bold tracking-tight pb-8">
                 Length Converter
             </div>
             <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full pb-8">
