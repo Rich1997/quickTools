@@ -58,7 +58,7 @@ const LengthConverter = () => {
                 Length Converter
             </div>
             <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full pb-8">
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col">
                     <Selector
                         name="From"
                         default={firstUnit}
@@ -67,7 +67,7 @@ const LengthConverter = () => {
                     />
                     <input
                         type="number"
-                        className="w-full rounded-none rounded-b-md bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
+                        className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-200 border-x border-y border-base-content/20"
                         placeholder="0"
                         value={firstValue}
                         onChange={(e) => handleFirstInputChange(e.target.value)}
@@ -82,7 +82,7 @@ const LengthConverter = () => {
                 >
                     <TbRefresh strokeWidth={3} />
                 </ActionButton>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col">
                     <Selector
                         name="To"
                         default={secondUnit}
@@ -91,7 +91,7 @@ const LengthConverter = () => {
                     />
                     <input
                         type="number"
-                        className="w-full rounded-none rounded-b-md bg-base-100 p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none bg-base-content/20 d-b"
+                        className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-200 border-x border-y border-base-content/20"
                         placeholder="0"
                         value={secondValue}
                         onChange={(e) =>
