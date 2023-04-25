@@ -7,7 +7,7 @@ import ThemeSelectorMobile from './ThemeSelectorMobile';
 const Navbar = () => {
     const menuItems = [{ item: 'Docs' }, { item: 'About' }, { item: 'GitHub' }];
     return (
-        <div className="fixed top-0 w-full border-b border-base-content/20 h-16 bg-base-100 select-none">
+        <div className="fixed top-0 w-full border-b border-base-content/10 h-16 bg-base-100 select-none">
             <div className="flex items-center justify-between gap-4 flex-wrap text-base-content pb-4 pt-[15px] px-6 max-w-7xl mx-auto">
                 <div className="tracking-tight text-2xl">
                     <span className="font-black italic ital">quick</span>
@@ -46,7 +46,7 @@ const Navbar = () => {
                                     </Anchor>
                                 ))}
                             </div>
-                            <div className="p-8 flex gap-6 flex-wrap items-center border-t border-base-content/10">
+                            <div className="p-8 flex gap-6 flex-wrap items-center border-t border-base-content/20">
                                 <div>Select theme</div>
                                 <ThemeSelectorMobile />
                             </div>
