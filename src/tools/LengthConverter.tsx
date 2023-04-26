@@ -57,69 +57,75 @@ const LengthConverter = () => {
             <div className="text-lg font-bold tracking-tight pb-8">
                 Length Converter
             </div>
-            <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full pb-8">
-                <div className="flex flex-col">
-                    <Selector
-                        name="From"
-                        default={firstUnit}
-                        data={lengths}
-                        onChange={handleFirstUnitChange}
-                    />
-                    <input
-                        type="number"
-                        className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-200 border-x border-y border-base-content/20"
-                        placeholder="0"
-                        value={firstValue}
-                        onChange={(e) => handleFirstInputChange(e.target.value)}
-                    />
-                </div>
-                <ActionButton
-                    action="Reset"
-                    clickHandler={() => {
-                        setFirstValue('');
-                        setSecondValue('');
-                    }}
-                >
-                    <TbRefresh strokeWidth={3} />
-                </ActionButton>
-                <div className="flex flex-col">
-                    <Selector
-                        name="To"
-                        default={secondUnit}
-                        data={lengths}
-                        onChange={handleSecondUnitChange}
-                    />
-                    <input
-                        type="number"
-                        className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-200 border-x border-y border-base-content/20"
-                        placeholder="0"
-                        value={secondValue}
-                        onChange={(e) =>
-                            handleSecondInputChange(e.target.value)
-                        }
-                    />
-                </div>
-            </div>
-            {Number(firstValue) && Number(secondValue) !== 0 ? (
-                <>
-                    <div className="flex gap-4 text-sm items-center pb-4">
-                        <div className="px-2 py-0.5 bg-success text-success-content rounded-md">
-                            Result
-                        </div>
-                        <div>
-                            {firstValue + ' ' + firstUnit} ={' '}
-                            {secondValue + ' ' + secondUnit}
-                        </div>
+            <div className="laptop:p-12 p-6 bg-gradient-to-br from-primary to-secondary rounded-md text-primary-content">
+                <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full pb-8">
+                    <div className="flex flex-col">
+                        <Selector
+                            name="From"
+                            default={firstUnit}
+                            data={lengths}
+                            onChange={handleFirstUnitChange}
+                        />
+                        <input
+                            type="number"
+                            className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-100 border-x border-y border-base-content/20"
+                            placeholder="0"
+                            value={firstValue}
+                            onChange={(e) =>
+                                handleFirstInputChange(e.target.value)
+                            }
+                        />
                     </div>
-                </>
-            ) : (
-                ''
-            )}
-            <div className="flex gap-4 text-sm items-center">
-                <div className="px-2 py-0.5 bg-accent text-accent-content rounded-md">
-                    Formula
+                    <ActionButton
+                        action="Reset"
+                        clickHandler={() => {
+                            setFirstValue('');
+                            setSecondValue('');
+                        }}
+                    >
+                        <TbRefresh strokeWidth={3} />
+                    </ActionButton>
+                    <div className="flex flex-col">
+                        <Selector
+                            name="To"
+                            default={secondUnit}
+                            data={lengths}
+                            onChange={handleSecondUnitChange}
+                        />
+                        <input
+                            type="number"
+                            className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-100 border-x border-y border-base-content/20"
+                            placeholder="0"
+                            value={secondValue}
+                            onChange={(e) =>
+                                handleSecondInputChange(e.target.value)
+                            }
+                        />
+                    </div>
                 </div>
-                <div>multiply the length value by {Number(factor)}</div>
+                {Number(firstValue) && Number(secondValue) !== 0 ? (
+                    <>
+                        <div className="flex gap-4 text-sm items-center pb-4">
+                            <div className="px-2 py-0.5 bg-success text-success-content rounded-md">
+                                Result
+                            </div>
+                            <div className="break-all">
+                                {firstValue + ' ' + firstUnit} ={' '}
+                                {secondValue + ' ' + secondUnit}
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    ''
+                )}
+                <div className="flex gap-4 text-sm items-center">
+                    <div className="px-2 py-0.5 bg-accent text-accent-content rounded-md">
+                        Formula
+                    </div>
+                    <div className="break-all">
+                        multiply the length value by {Number(factor)}
+                    </div>
+                </div>
             </div>
         </>
     );
