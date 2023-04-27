@@ -57,7 +57,7 @@ const LengthConverter = () => {
             <div className="text-lg font-bold tracking-tight pb-8">
                 Length Converter
             </div>
-            <div className="laptop:p-12 px-6 py-12 bg-gradient-to-br from-primary to-secondary rounded-md text-primary-content">
+            <div className="laptop:p-12 px-6 py-12 bg-base-200 rounded-lg text-base-content">
                 <div className="flex tablet:items-center justify-between gap-6 tablet:flex-row flex-col w-full pb-8">
                     <div className="flex flex-col">
                         <Selector
