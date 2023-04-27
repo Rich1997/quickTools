@@ -7,7 +7,7 @@ const ActionButton = (props: {
 }) => {
     return (
         <div className="flex justify-center">
-            <div
+            <button
                 className="tablet:tooltip pt-1"
                 data-tip={props.action}
                 onClick={props.clickHandler}
@@ -15,7 +15,7 @@ const ActionButton = (props: {
                 <div className="p-4 rounded-full bg-accent text-accent-content transform active:scale-75 transition-transform cursor-pointer rotate-90 tablet:rotate-0">
                     {props.children}
                 </div>
-            </div>
+            </button>
         </div>
     );
 };

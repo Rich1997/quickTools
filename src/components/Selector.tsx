@@ -38,7 +38,7 @@ const Selector = (props: {
                     value={props.default}
                     onValueChange={props.onChange}
                 >
-                    <Select.Trigger className="-mb-px relative text-sm w-full leading-none text-base-content px-4 py-2 bg-base-100 rounded-t-md focus:shadow-[0_0_0_2px] focus:shadow-bg-content outline-none d-b d-s-h">
+                    <Select.Trigger className="-mb-px relative text-sm w-full leading-none text-base-content px-4 py-2 bg-base-100 rounded-t-md focus:shadow-[0_0_0_2px] focus:shadow-base-content outline-none d-b d-s-h">
                         <div className="flex items-center justify-between gap-1">
                             <Select.Value aria-label={props.name}>
                                 {props.default.charAt(0).toUpperCase() +

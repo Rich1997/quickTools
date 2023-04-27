@@ -68,7 +68,7 @@ const LengthConverter = () => {
                         />
                         <input
                             type="number"
-                            className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-100 border-x border-y border-base-content/20"
+                            className="w-full rounded-none rounded-b-md p-4 text-base-content text-sm focus:shadow-[0_0_0_2px] focus:shadow-base-content focus:relative outline-none bg-base-100 border-x border-y border-base-content/20"
                             placeholder="0"
                             value={firstValue}
                             onChange={(e) =>
@@ -94,7 +94,7 @@ const LengthConverter = () => {
                         />
                         <input
                             type="number"
-                            className="w-full rounded-none rounded-b-md p-4 focus:shadow-[0_0_0_2px] focus:shadow-bg-content focus:relative outline-none bg-base-100 border-x border-y border-base-content/20"
+                            className="w-full rounded-none rounded-b-md p-4 text-base-content text-sm focus:shadow-[0_0_0_2px] focus:shadow-base-content focus:relative outline-none bg-base-100 border-x border-y border-base-content/20"
                             placeholder="0"
                             value={secondValue}
                             onChange={(e) =>
