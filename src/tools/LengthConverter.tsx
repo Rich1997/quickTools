@@ -83,7 +83,10 @@ const LengthConverter = () => {
                             setSecondValue('');
                         }}
                     >
-                        <TbRefresh strokeWidth={3} />
+                        <div className="flex gap-2 items-center text-sm">
+                            <TbRefresh strokeWidth={3} />
+                            <div className="block tablet:hidden">Reset</div>
+                        </div>
                     </ActionButton>
                     <div className="flex flex-col">
                         <Selector
