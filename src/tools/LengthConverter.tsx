@@ -112,9 +112,18 @@ const LengthConverter = () => {
                             <div className="px-2 py-0.5 bg-success text-success-content rounded-md">
                                 Result
                             </div>
-                            <div className="break-all">
-                                {firstValue + ' ' + firstUnit} ={' '}
-                                {secondValue + ' ' + secondUnit}
+                            <div className="break-words">
+                                <span className="break-all">{firstValue} </span>
+                                <span className="font-bold">
+                                    {firstUnit.toLowerCase()}
+                                </span>{' '}
+                                ={' '}
+                                <span className="break-all">
+                                    {secondValue}{' '}
+                                </span>
+                                <span className="font-bold">
+                                    {secondUnit.toLowerCase()}
+                                </span>
                             </div>
                         </div>
                     </>
@@ -125,8 +134,9 @@ const LengthConverter = () => {
                     <div className="px-2 py-0.5 bg-accent text-accent-content rounded-md">
                         Formula
                     </div>
-                    <div className="break-all">
-                        multiply the length value by {Number(factor)}
+                    <div className="break-words">
+                        multiply the length value by{' '}
+                        <span className="break-all">{Number(factor)}</span>
                     </div>
                 </div>
             </div>
